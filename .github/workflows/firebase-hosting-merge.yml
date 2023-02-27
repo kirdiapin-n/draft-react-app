@@ -10,6 +10,11 @@ env:
   REACT_APP_MY_VAR: ${{ vars.MY_VAR }}
   REACT_APP_MY_API_KEY: ${{ secrets.MY_API_KEY }}
 jobs:
+  eslint_and_ts_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci && eslint "./**/*.{ts, tsx}"
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:

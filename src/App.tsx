@@ -5,7 +5,6 @@ import {config} from './config';
 
 function App() {
   console.log({api: config.api})
-
   return (
     <div className="App">
       <header className="App-header">
