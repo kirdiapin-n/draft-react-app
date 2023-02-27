@@ -4,14 +4,19 @@
 name: Deploy to Firebase Hosting on PR
 'on': pull_request
 env:
-  TEST: my test variable
+  REACT_APP_TEST: ${{ vars.TEST_1 }}
 jobs:
+  bb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output vars
+        run: |
+          echo "var REACT_APP_TEST : $REACT_APP_TEST"
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "$TEST"
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
