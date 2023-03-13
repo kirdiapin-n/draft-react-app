@@ -4,7 +4,6 @@ import './App.css';
 import {config} from './config';
 
 function App() {
-  console.log({api: config.api})
 
   return (
     <div className="App">
