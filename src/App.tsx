@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Link} from "./ui/Link";
+import {Button} from "./ui/Button";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Link className="App-link" href="https://reactjs.org" rel="noopener noreferrer">
           {process.env.REACT_APP_MY_VAR}
         </Link>
+        <Button>Test Button Name</Button>
       </header>
     </div>
   );
