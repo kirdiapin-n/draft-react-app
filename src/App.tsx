@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Link} from "./ui/Link";
+import {Button} from "./ui/Button";
 
 function App() {
 
@@ -11,14 +13,10 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="App-link" href="https://reactjs.org" rel="noopener noreferrer">
           {process.env.REACT_APP_MY_VAR}
-        </a>
+        </Link>
+        <Button>Test Button Name</Button>
       </header>
     </div>
   );
